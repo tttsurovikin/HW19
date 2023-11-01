@@ -7,14 +7,9 @@
 //        У класі  Program створіть користувача з параметрами: "Alice", "qwerty". Використайте метод displayAccount().
 //        Повинен бути виведений логін та пароль користувача приблизно такого вигляду: Account Login successful! Login: Alice, Password: qwerty
 
-class Program {
-    public static void main(String [] args){
-
-    }
-}
-class User {
+public class User {
     private String login;
-    private Account account;
+   Account account;
 
 
     public User(String login, String password){
@@ -22,11 +17,9 @@ class User {
         this.account = new Account(password);
     }
 
-    public void displayAccount(){
-        System.out.println("Account Login successful! Login: " + login + ", Password: " + account.getPassword());
-    }
     class Account {
         private String password;
+
 
         public Account(String password) {
             this.password = password;
@@ -34,6 +27,10 @@ class User {
 
         public String getPassword() {
             return password;
+
+        }
+        void displayAccount(){
+            System.out.println("Account Login successful! Login: " + login + " Password: "+  password);
         }
     }
 }
